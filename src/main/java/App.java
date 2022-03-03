@@ -8,5 +8,12 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+        HelloWorld bean1 =
+                (HelloWorld) applicationContext.getBean("helloworld");
+        System.out.println(bean.getMessage());
+        System.out.println(bean == bean1);
+        Cat cat = (Cat) applicationContext.getBean("Cat");
+        Cat cat1 = (Cat) applicationContext.getBean("Cat");
+        System.out.println(cat == cat1);
     }
 }
